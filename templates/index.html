@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The CloudAdvisory registration details</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body {
+      background: url("https://pbs.twimg.com/profile_images/992799868254064640/HNoUG5Z7.jpg") no-repeat center;
+      background-size: cover;
+      }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  alignment-baseline: central;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Country</th>
+    </tr>
+    {{ range . }}
+    <tr>
+        <td>{{.Fname}}</td>
+        <td>{{.Email}}</td>
+        <td>{{.Phone}}</td>
+        <td>{{.Country}}</td>
+    </tr>
+    {{ end }}
+</table>
+
+<a href="/new/">New User</a>
+
+</body>
+</html>
