@@ -6,22 +6,6 @@
     <link href="/public/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<table>
-    <tr>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Country</th>
-    </tr>
-    {{ range . }}
-    <tr>
-        <td>{{.Fname}}</td>
-        <td>{{.Email}}</td>
-        <td>{{.Phone}}</td>
-        <td>{{.Country}}</td>
-    </tr>
-    {{ end }}
-</table>
 
 <a href="/new/">New User</a>
 
