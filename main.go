@@ -89,7 +89,6 @@ func main() {
 	http.HandleFunc("/new/", newHandler)
 	http.HandleFunc("/save/", saveHandler)
 
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
 	fmt.Println("Listening Server.....")
 	if err := http.ListenAndServe("0.0.0.0:3000", nil); err != nil {
