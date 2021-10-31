@@ -85,9 +85,13 @@ func main() {
 	PanicIf(err)
 	fmt.Println("Table create successull", ctble)
 
+
 	http.HandleFunc("/", viewHandler)
 	http.HandleFunc("/new/", newHandler)
 	http.HandleFunc("/save/", saveHandler)
+
+	http.Handle("/public/css/", http.StripPrefix("/public/css/", http.FileServer(http.Dir("public/css"))))
+	http.Handle("/public/images/", http.StripPrefix("/public/images/", http.FileServer(http.Dir("public/images"))))
 
 	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
 	fmt.Println("Listening Server.....")
