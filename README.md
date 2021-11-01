@@ -35,7 +35,7 @@ go run main.go
 
 ## Screen shot -  New Regisration
 
-![image info](./public/registration.png)
+![image info](/public/registration.png)
 
 ## Screen shot -  All Regisration
 
