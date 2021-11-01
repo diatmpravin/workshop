@@ -11,6 +11,8 @@ exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
 sleep 10
 yum update -y
 yum install wget -y
+yum install git -y
+yum install util-linux -y
 wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
 tar -zxvf go1.15.5.linux-amd64.tar.gz -C /usr/local/
 export PATH=$PATH:/usr/local/go/bin
