@@ -5,6 +5,10 @@
 Find latest Golang version from [here](https://golang.org/dl/). I am using Golang 15.5
 
 ```
+#!/bin/bash
+exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+# Sleep for the instance role might not be properly attached
+sleep 10
 yum update -y
 yum install wget -y
 wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
