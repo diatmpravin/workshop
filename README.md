@@ -1,4 +1,4 @@
-### Register for Workshop Application
+# Register for Workshop Application
 
 ## Install Golang to run the application (RHEL7)
 
